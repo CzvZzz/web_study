@@ -1,4 +1,4 @@
-"""learning_log URL Configuration
+"""Blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -14,15 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-
-app_name = 'learning_logs'
+from django.urls import path
 
 urlpatterns = [
-
     path('admin/', admin.site.urls),
-
-    path('', include(('learning_logs.urls', 'learning_logs'), namespace='learning_logs')),
-
-    path('users/', include(('users.urls', 'users'), namespace='users')),
 ]
